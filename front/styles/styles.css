@@ -69,7 +69,7 @@
 }
 /*Endpoint navbar styles*/
 
-/*Films styles*/
+/*Films Cards styles*/
 .films-container {
     display: flex;
     align-items: center;
@@ -77,8 +77,8 @@
     flex-wrap: wrap;
     gap: 15px;
     width: 100%;
+    min-height: 100vh;
     margin: 0 auto;
-    height: 100vh;
     background-color: #0c223ccc;
     padding: 20px;
     font-family: var(--primary-font);
@@ -86,6 +86,7 @@
 .film-card {
     width: 14rem;
     height: 24rem;
+    margin-top: 50px;
     background-color: #14244f;
     border-radius: 5px;
     transform: translateY(0px);
@@ -163,3 +164,4 @@
     border-radius: 5px;
     background: linear-gradient(180deg, rgb(14, 88, 134) 10%, rgb(100, 11, 121) 100%);
 }
+/*Endpoint Films styles*/
