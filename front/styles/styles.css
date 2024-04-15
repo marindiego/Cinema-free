@@ -11,6 +11,9 @@
     background: linear-gradient(180deg, rgba(28,55,87,1) 0%, rgba(52,106,150,1) 51%, rgba(28,55,87,1) 100%);
     min-height: 100vh;                                                
 }
+.body-page *:hover {
+    text-decoration: none;
+}
 /*Entrypoint navbar styles*/
 .header {
     position: absolute;
@@ -23,6 +26,7 @@
     font-family: var(--primary-font);
     font-size: 12px;
     letter-spacing: .5px;
+    z-index: 2;
 }
 .header-title-logo {
     margin-left: 10px;
@@ -61,7 +65,7 @@
     background: var(--primary-color);
     transition: width 0.3s ease-in-out;
 }
-.navbar-links-container li:hover {
+.navbar-links-container li:hover a {
     color: var(--primary-color);
 }
 .navbar-links-container li:hover::before {
@@ -79,13 +83,13 @@
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
-    background-color: #0c223ccc;
+    background: #142b45cc;
     padding: 20px;
     font-family: var(--primary-font);
 }
 .film-card {
     width: 14rem;
-    height: 24rem;
+    height: 25rem;
     margin-top: 50px;
     background-color: #14244f;
     border-radius: 5px;
@@ -128,6 +132,7 @@
 .film-director, .film-year, .film-duration {
     grid-column: 2 / 3;
     color: var(--primary-color);
+    font-weight: 700;
 }
 .film-duration, .film-rate {
     grid-row: 4;
