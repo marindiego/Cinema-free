@@ -8,6 +8,7 @@
     height: 25rem;
     background: #8840847a;
     color: var(--white);
+    z-index: 3;
 }
 .sign-in-card a:hover {
     color: var(--secondary-color);
@@ -20,4 +21,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.image-slide {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(153,161,171);
+    background: radial-gradient(circle, rgb(125 142 163 / 24%) 0%, rgb(34 56 97 / 48%) 46%, rgb(37 9 45) 100%);
+    z-index: 1;
 }
