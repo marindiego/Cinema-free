@@ -7,10 +7,14 @@ const fetchFilms = async () => {
     try {
         const response = await axios.get(APIFilms);
         const films = response.data;
-        renderFilmsCards(films);
+        return films;
     } catch (error) {
         console.log(error);
     }
 }
 
-fetchFilms();
+const main = () => {
+    fetchFilms().then(films => renderFilmsCards(films));
+}
+
+main();
