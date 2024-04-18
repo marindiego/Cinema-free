@@ -1,5 +1,12 @@
+const moviesService = require('../services/moviesService')
+
 module.exports = {
-    getAllMovies: (req,res) => {
-        res.status(200).send('Movies data will be available soon ')
+    getAllMovies: async (req, res) => {
+        try {
+            const movies = await moviesService.getMovies();
+            res.status(200).send(movies);
+        } catch (error) {
+            res.status(500).send(error);
+        }
     }
 }
