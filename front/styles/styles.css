@@ -65,6 +65,9 @@
     background: var(--primary-color);
     transition: width 0.3s ease-in-out;
 }
+.navbar-links-container li a {
+    transition: color 0.5s ease-in-out;
+}
 .navbar-links-container li:hover a {
     color: var(--primary-color);
 }
@@ -149,10 +152,11 @@
 .film-rate .icon-start-container {
     display: inline-block;
     width: 10px;
-    height: 10px;
+    height: 100%;
 }
 .film-rate .icon-start-container svg{
     fill: #dbdf19;
+    transform: translateY(-2px);
 }
 .film-gender {
     grid-column: 1 / 3;

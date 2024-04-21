@@ -4,9 +4,9 @@ module.exports = {
     getAllMovies: async (req, res) => {
         try {
             const movies = await moviesService.getMovies();
-            res.status(200).send(movies);
+            res.status(200).json(movies);
         } catch (error) {
-            res.status(500).send(error);
+            res.status(500).json(error);
         }
     }
 }
