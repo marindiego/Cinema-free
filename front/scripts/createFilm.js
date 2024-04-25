@@ -22,14 +22,14 @@ const resetInputs = () => {
 }
 const isEmptyInputs = () => {
     const inputs = document.querySelectorAll('input:not([type="checkbox"])');
-    let isEmpty = true;
+    let isEmpty = false;
     inputs.forEach(input => {
-        if (!input.value) isEmpty = false;
+        if (!input.value) isEmpty = true;
     })
     return isEmpty;
 }
 const isValidInputs = () => {
-    if (filmTitle.value.length > 20 || parseFloat(filmYear.value) > 9999 || filmRate.value > 11 ) {
+    if (filmTitle.value.length > 20 || parseFloat(filmYear.value) > 9999 || filmRate.value > 11) {
         return false;
     }
     return true;
@@ -40,7 +40,6 @@ const resetHandler = () => {
 const postFilm = async (film) => {
     try {
         const response = await axios.post('http://localhost:3000/movies/create-film', film);
-        console.log(response);
     } catch (error) {
         console.error(error);
     }
@@ -48,6 +47,8 @@ const postFilm = async (film) => {
 const returnCheckBoxes = () => {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
     const values = [];
+    if (!checkboxes.length) return false;
+
     checkboxes.forEach(checkbox => {
         values.push(checkbox.value);
     });
@@ -57,9 +58,9 @@ const returnCheckBoxes = () => {
 
 const submitHandler = (e) => {
     e.preventDefault();
-    if (!isEmptyInputs()) return alert("All fields are required");
+    if (isEmptyInputs()) return alert("All fields are required");
     if (!isValidInputs()) return alert("Invalid inputs");
-
+    if (!returnCheckBoxes()) return alert("Select at least one genre");
     const filmGenre = returnCheckBoxes();
     const film = {
         title: filmTitle.value,
