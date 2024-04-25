@@ -6,15 +6,35 @@ const { Schema } = mongoose;
 
 // Define un esquema de datos para el modelo de película
 const movieSchema = new Schema({
-    title: String,
-    year: Number,
-    director: String,
-    duration: Number,
-    genre: Array,
-    rate: Number,
-    poster: String
+    title: {
+        type: String,
+        required: true
+    },
+    year: {
+        type: Number,
+        required: true
+    },
+    director: {
+        type: String,
+        required: true
+    },
+    duration: {
+        type: String,
+        required: true
+    },
+    genre: {
+        type: Array,
+        required: true
+    },
+    rate: {
+        type: Number,
+        required: true
+    },
+    poster: {
+        type: String,
+        required: true
+    }
 });
-
 // Crea un modelo de datos de película utilizando el esquema definido anteriormente
 const Movie = mongoose.model('Movie', movieSchema);
 

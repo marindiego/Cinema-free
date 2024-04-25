@@ -1,0 +1,15 @@
+
+.form-container {
+    background: #9fbada;
+    height: auto;
+    padding: 10px;
+    margin-top: 1.5rem;
+    font-family: var(--primary-font);
+}
+.form-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.btn-primary {
+    background: linear-gradient(180deg, rgb(44, 44, 133), rgb(89 16 113));
+}

@@ -1,7 +1,11 @@
 module.exports = {
-    entry: './scripts/index.js',
+    mode: 'development',
+    entry: {
+        index: './scripts/index.js',
+        films: './scripts/createFilm.js'
+    },
     output: {
         path: __dirname + '/dist',
-        filename: 'bundle.js'
+        filename: '[name].js'
     }
 }
