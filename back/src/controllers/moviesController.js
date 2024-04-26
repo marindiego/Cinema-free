@@ -19,7 +19,7 @@ module.exports = {
         }
     },
     deleteFilmByTitle: async (req, res) => {
-        const { title } = req.body;
+        const { title } = req.params;
         try {
             const movie = await moviesService.deleteFilmByTitle(title);
             res.status(200).json({

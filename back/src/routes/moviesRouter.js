@@ -15,7 +15,7 @@ router.get("/", moviesController.getAllMovies);
 router.post("/create-film",moviesMiddleware.validateMovieData ,moviesController.createFilm);
 
 //Define a route for handling DELETE requests to the /delete-film-byTitle endpoint
-router.delete("/delete-film-byTitle",moviesMiddleware.checkMovieExist,moviesController.deleteFilmByTitle);
+router.delete("/delete-film-byTitle/:title",moviesMiddleware.checkMovieExist,moviesController.deleteFilmByTitle);
 
 // Export the router module
 module.exports = router;

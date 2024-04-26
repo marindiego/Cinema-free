@@ -12,7 +12,7 @@ module.exports =  {
         }
     },
     checkMovieExist: async (req, res, next) => {
-        const { title } = req.body;
+        const { title } = req.params;
         try {
             const movie = await Movie.findOne({ title });
             if (!movie) {
