@@ -9,7 +9,8 @@
 .body-page {
     background: rgb(28,55,87);
     background: linear-gradient(180deg, rgba(28,55,87,1) 0%, rgba(52,106,150,1) 51%, rgba(28,55,87,1) 100%);
-    min-height: 100vh;                                                
+    min-height: 100vh;
+    font-family: var(--primary-font);                                                
 }
 body *:hover {
     text-decoration: none;
@@ -23,7 +24,8 @@ body *:hover {
 }
 /*Navbar styles*/
 .header {
-    position: absolute;
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,7 +47,7 @@ body *:hover {
     font-weight: bolder;
 }
 .header-navbar {
-    width: 410px;
+    min-width: 37%;
     height: 100%;
     margin-right: 10px;
 }
@@ -79,7 +81,7 @@ body *:hover {
     color: var(--primary-color);
 }
 .navbar-links-container li:hover::before {
-    width: 90%; 
+    width: 80%; 
 }
 /*Endpoint navbar styles*/
 

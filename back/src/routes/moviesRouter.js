@@ -1,4 +1,4 @@
-// Import the Router class from Express
+// Import the Router class from Express and movies middleware
 const { Router } = require("express");
 const moviesMiddleware = require('../middlewares/validateMovie');
 
@@ -13,6 +13,9 @@ router.get("/", moviesController.getAllMovies);
 
 // Define a route for handling POST requests to the /create-film endpoint
 router.post("/create-film",moviesMiddleware.validateMovieData ,moviesController.createFilm);
+
+//Define a route for handling DELETE requests to the /delete-film-byTitle endpoint
+router.delete("/delete-film-byTitle",moviesMiddleware.checkMovieExist,moviesController.deleteFilmByTitle);
 
 // Export the router module
 module.exports = router;

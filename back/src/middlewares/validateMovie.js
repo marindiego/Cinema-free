@@ -1,3 +1,5 @@
+const Movie = require('../models/Movie');
+
 module.exports =  {
     validateMovieData: (req, res, next) => {
         const { title, year, director, duration, genre, rate, poster } = req.body;
@@ -8,5 +10,21 @@ module.exports =  {
         } else {
             next();
         }
-    }   
+    },
+    checkMovieExist: async (req, res, next) => {
+        const { title } = req.body;
+        try {
+            const movie = await Movie.findOne({ title });
+            if (!movie) {
+                return res.status(404).json({
+                    message: 'Movie not found'
+                })
+            }
+            next()
+        } catch (error) {
+            res.status(500).json({
+                message: error.message,
+            })
+        }
+       }   
 }

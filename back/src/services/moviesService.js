@@ -18,5 +18,14 @@ module.exports = {
         } catch (error) {
             console.log(error);
         }
+    },
+    deleteFilmByTitle: async (title) => {
+        try {
+            // Intenta eliminar una película utilizando el modelo 'Movie'
+            // El method 'deleteOne()' recibe un objeto con los datos de la película
+            return await Movie.deleteOne({ title });
+        } catch (error) {
+            console.log(error);
+        }
     }
 }

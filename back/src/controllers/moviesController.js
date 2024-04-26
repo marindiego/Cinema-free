@@ -17,5 +17,16 @@ module.exports = {
         } catch (error) {
             res.status(500).json(error,"algo salio mal controller");
         }
+    },
+    deleteFilmByTitle: async (req, res) => {
+        const { title } = req.body;
+        try {
+            const movie = await moviesService.deleteFilmByTitle(title);
+            res.status(200).json({
+                message: "Movie deleted successfully"
+            });
+        } catch (error) {
+            res.status(500).json(error);
+        }
     }
 }

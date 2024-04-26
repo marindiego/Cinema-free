@@ -1,4 +1,6 @@
-
+.header {
+    position: absolute;
+}
 .sign-in-container {
     background-color: #142b45cc;
     height: 100vh;
