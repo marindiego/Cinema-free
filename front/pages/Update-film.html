@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script defer src="../dist/delete.js"></script>
+    <script defer src="../dist/update.js"></script>
 </head>
   </head>
   <body>
@@ -47,18 +47,46 @@
                 <a href="./delete-film.html">Delete Films</a>
             </li>
             <li>
-              <a href="./Update-film.html">Update Films</a>
+                <a href="./Update-film.html">Update Films</a>
             </li>
           </ul>
         </nav>
       </header>
       <form class="col-sm-6 mx-auto mt-5 p-3 bg-body-secondary">
-        <h1 class="form-title">Delete a film by entering its title </h1>
+        <h1 class="form-title">Update a film by entering its title</h1>
         <div class="form-floating mb-3">
             <input type="text" class="form-control" id="film-title" placeholder="Film Title" name="film-title" required >
             <label for="film-title" class="form-label">Film title</label>
         </div>
-        <button id="button-delete" type="button" class="btn btn-primary">Delete</button>
+        <button id="button-search" type="button" class="btn btn-primary">Update</button>
+      </form>
+      <form id="form-update" class="col-sm-6 mx-auto mt-5 p-3 bg-body-secondary d-none">
+        <p class="fw-bolder fst-italic">Which fields do you want to update ?</p>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="film-title-ToUpdate" placeholder="Title Film" name="film-title-ToUpdate" required>
+            <label for="film-title-ToUpdate">Film title</label>
+          </div>
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="film-year" placeholder="year Film" min="1" max="10" name="film-year" step="0.1" required>
+            <label for="film-year">Year Film</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="film-rate" placeholder="Rate Film" min="1" max="10" name="film-rate" step="0.1" required>
+            <label for="film-rate">Rate Film</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="film-director" placeholder="Director Film" required name="film-director">
+            <label for="film-director">Director Film</label>
+          </div>
+          <div class="form-floating mb-2">
+            <input type="text" class="form-control" id="film-duration" placeholder="Duration Film" name="film-duration" required>
+            <label for="film-duration">Duration Film</label>
+          </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="film-poster" placeholder="Poster Film" name="film-poster" required>
+            <label for="film-poster">Poster Film</label>
+        </div>
+        <button type="button" id="button-update" class="btn btn-primary mb-3">Update Film</button>
       </form>
     </main>
    <!-- Bootstrap JS (jQuery and Popper.js required) -->

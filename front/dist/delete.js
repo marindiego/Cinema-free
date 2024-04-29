@@ -15,7 +15,7 @@
   \*******************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\")\r\n\r\ndocument.getElementById(\"button-delete\").addEventListener(\"click\", () => {\r\n    const filmTitle = document.getElementById(\"film-title\")\r\n    axios.delete(`http://localhost:3000/movies/delete-film-byTitle/${filmTitle.value}`)\r\n    .then(res => {\r\n        alert(res.data.message);\r\n        filmTitle.value = \"\";\r\n    }).catch(err => {\r\n        alert(err.response.data.message);\r\n    });\r\n})\n\n//# sourceURL=webpack://front/./scripts/deleteFilm.js?");
+eval("const axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\")\r\n\r\ndocument.getElementById(\"button-delete\").addEventListener(\"click\", () => {\r\n    const filmTitle = document.getElementById(\"film-title\")\r\n    if (!filmTitle.value) {\r\n        alert(\"Please enter a film title\");\r\n        return;\r\n    }\r\n    axios.delete(`http://localhost:3000/movies/delete-film-byTitle/${filmTitle.value}`)\r\n    .then(res => {\r\n        alert(res.data.message);\r\n        filmTitle.value = \"\";\r\n    }).catch(err => {\r\n        alert(err.response.data.message);\r\n    });\r\n})\n\n//# sourceURL=webpack://front/./scripts/deleteFilm.js?");
 
 /***/ }),
 

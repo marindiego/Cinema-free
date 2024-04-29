@@ -61,6 +61,7 @@ const submitHandler = (e) => {
     if (isEmptyInputs()) return alert("All fields are required");
     if (!isValidInputs()) return alert("Invalid inputs");
     if (!returnCheckBoxes()) return alert("Select at least one genre");
+    
     const filmGenre = returnCheckBoxes();
     const film = {
         title: filmTitle.value,

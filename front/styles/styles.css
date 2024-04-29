@@ -165,7 +165,7 @@ body *:hover {
 }
 .film-rate .icon-start-container svg{
     fill: #dbdf19;
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 .film-gender {
     grid-column: 1 / 3;

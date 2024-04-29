@@ -47,6 +47,9 @@
             <li>
               <a href="./delete-film.html">Delete Films</a>
             </li>
+            <li>
+              <a href="./Update-film.html">Update Films</a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -68,29 +71,59 @@
           <input type="text" class="form-control" id="film-duration" placeholder="Duration Film" name="film-duration" required>
           <label for="film-duration">Duration Film</label>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Action" id="Action">
-          <label class="form-check-label" for="Action">
-            Action
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Adventure" id="Adventure" >
-          <label class="form-check-label" for="Adventure">
-            Adventure
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Sci-fi" id="Sci-fi">
-          <label class="form-check-label" for="Sci-fi">
-            Sci-fi
-          </label>
-        </div>
-        <div class="form-check mb-1">
-          <input class="form-check-input" type="checkbox" value="Fantansy" id="Fantansy">
-          <label class="form-check-label" for="Fantansy">
-            Fantasy
-          </label>
+        <div class="row">
+          <div class="col">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Action" id="Action">
+              <label class="form-check-label" for="Action">
+                Action
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Adventure" id="Adventure" >
+              <label class="form-check-label" for="Adventure">
+                Adventure
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Sci-fi" id="Sci-fi">
+              <label class="form-check-label" for="Sci-fi">
+                Sci-fi
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" value="Fantansy" id="Fantansy">
+              <label class="form-check-label" for="Fantansy">
+                Fantasy
+              </label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Comedy" id="Comedy">
+              <label class="form-check-label" for="Comedy">
+                Comedy
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Drama" id="Drama">
+              <label class="form-check-label" for="Drama">
+                Drama
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Sex" id="Sex">
+              <label class="form-check-label" for="Sex">
+                Sex
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" value="History" id="History">
+              <label class="form-check-label" for="History">
+                History
+              </label>
+            </div>
+          </div>
         </div>
         <div class="form-floating mb-3">
           <input type="number" class="form-control" id="film-rate" placeholder="Rate Film" min="1" max="10" name="film-rate" step="0.1" required>
