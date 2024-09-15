@@ -13,6 +13,8 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     publicPath: "/dist/",
   },
-  plugins: [new Dotenv()],
+  plugins: [new Dotenv({
+    systemvars: true
+  })],
   mode: "development",
 };
