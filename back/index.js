@@ -3,7 +3,7 @@ const app = require("./src/server");
 const connectDB = require("./src/config/conDb");
 
 connectDB().then(() => {
-    app.listen(3000, () => {
+    app.listen(3000, "0.0.0.0", () => {
         console.log("Server is running on port 3000");
     });
 })
