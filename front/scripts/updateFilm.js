@@ -1,8 +1,8 @@
 const axios = require("axios");
-
+const API_URL = process.env.API_URL;
 // Función para enviar una solicitud PUT para actualizar una película
 const updateMovie = (filmTitle, movieData) => {
-    return axios.put(`http://localhost:3000/movies/update-film/${filmTitle}`, movieData);
+    return axios.put(`${API_URL}/movies/update-film/${filmTitle}`, movieData);
 }
 
 // Función para mostrar un mensaje de alerta
@@ -25,7 +25,7 @@ const handleSearchButton = () => {
         return;
     }
 
-    axios.get(`http://localhost:3000/movies/get-film-byTitle/${filmTitle}`)
+    axios.get(`${API_URL}/movies/get-film-byTitle/${filmTitle}`)
     .then(response => {
         const film = response.data;
         displayFilmData(film);

@@ -8,6 +8,7 @@ const btnSubmit = document.getElementById('button-submit');
 const btnReset = document.getElementById('button-reset');
 
 axios = require('axios');
+const API_URL = process.env.API_URL;
 
 const resetInputs = () => {
     const inputs = document.querySelectorAll('input');
@@ -39,7 +40,7 @@ const resetHandler = () => {
 }
 const postFilm = async (film) => {
     try {
-        const response = await axios.post('http://localhost:3000/movies/create-film', film);
+        const response = await axios.post(`${API_URL}/movies/create-film`, film);
     } catch (error) {
         console.error(error);
     }

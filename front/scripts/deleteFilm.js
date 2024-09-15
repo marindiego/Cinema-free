@@ -1,4 +1,5 @@
 const axios = require("axios")
+const API_URL = process.env.API_URL;
 
 document.getElementById("button-delete").addEventListener("click", () => {
     const filmTitle = document.getElementById("film-title")
@@ -6,7 +7,7 @@ document.getElementById("button-delete").addEventListener("click", () => {
         alert("Please enter a film title");
         return;
     }
-    axios.delete(`http://localhost:3000/movies/delete-film-byTitle/${filmTitle.value}`)
+    axios.delete(`${API_URL}/movies/delete-film-byTitle/${filmTitle.value}`)
     .then(res => {
         alert(res.data.message);
         filmTitle.value = "";
