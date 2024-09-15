@@ -1,4 +1,4 @@
-const Movie = require('../models/Movie.js');
+const Movie = require('../models/movie.js');
 
 module.exports =  {
     validateMovieData: (req, res, next) => {
